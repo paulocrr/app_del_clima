@@ -1,0 +1,2 @@
+D:/Documentos/CodiGo/Flutter/app_del_clima/android/app/.cxx/Debug/372x1y23/x86_64/CMakeFiles/edit_cache.dir
+D:/Documentos/CodiGo/Flutter/app_del_clima/android/app/.cxx/Debug/372x1y23/x86_64/CMakeFiles/rebuild_cache.dir

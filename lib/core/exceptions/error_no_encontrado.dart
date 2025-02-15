@@ -1,0 +1,1 @@
+class ErrorNoEncontrado implements Exception {}

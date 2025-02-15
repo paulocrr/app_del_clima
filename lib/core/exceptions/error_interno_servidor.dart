@@ -1,0 +1,1 @@
+class ErrorInternoServidor implements Exception {}
