@@ -1,3 +1,4 @@
+import 'package:app_del_clima/core/exceptions/error_cuota_excedida.dart';
 import 'package:app_del_clima/core/exceptions/error_desconocido.dart';
 import 'package:app_del_clima/core/exceptions/error_en_peticion.dart';
 import 'package:app_del_clima/core/exceptions/error_interno_servidor.dart';
@@ -40,6 +41,8 @@ class NetworkDataSource {
           throw ErrorNoAutorizado();
         } else if (respuestaError?.statusCode == 404) {
           throw ErrorNoEncontrado();
+        } else if (respuestaError?.statusCode == 429) {
+          throw ErrorCuotaExcedida();
         } else if (respuestaError?.statusCode == 500) {
           throw ErrorInternoServidor();
         } else {

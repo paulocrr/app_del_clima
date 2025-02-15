@@ -1,4 +1,5 @@
 import 'package:app_del_clima/core/configs/configs.dart';
+import 'package:app_del_clima/core/exceptions/error_cuota_excedida.dart';
 import 'package:app_del_clima/core/exceptions/error_en_peticion.dart';
 import 'package:app_del_clima/core/exceptions/error_interno_servidor.dart';
 import 'package:app_del_clima/core/exceptions/error_no_autorizado.dart';
@@ -35,6 +36,8 @@ class ClimaRepository {
       return Left(FallaNoAutorizado());
     } on ErrorNoEncontrado {
       return Left(FallaNoEncontrado());
+    } on ErrorCuotaExcedida {
+      return Left(FallaCuotaExcedida());
     } on ErrorInternoServidor {
       return Left(FallaInternaServidor());
     } catch (e) {

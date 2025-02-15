@@ -27,3 +27,8 @@ class FallaNoEncontrado extends Failure {
 class FallaSinConeccion extends Failure {
   FallaSinConeccion() : super(mensaje: 'Sin coneccion a internet');
 }
+
+class FallaCuotaExcedida extends Failure {
+  FallaCuotaExcedida()
+      : super(mensaje: 'Se ha llegado al limite de peticiones');
+}
