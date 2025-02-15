@@ -27,13 +27,13 @@ class NetworkDataSource {
   }) async {
     try {
       final response = await dio.get(path, queryParameters: params);
+
       return response.data;
     } on DioException catch (e) {
       if (e.type == DioExceptionType.connectionError) {
         throw ErrorSinConeccion();
       } else {
         final respuestaError = e.response;
-
         if (respuestaError?.statusCode == 400) {
           throw ErrorEnPeticion();
         } else if (respuestaError?.statusCode == 401) {
